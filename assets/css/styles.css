@@ -164,6 +164,11 @@ img {
 
 
 /*=============== HOME ===============*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
 .home,
 .home__container{
   position: relative;
@@ -327,6 +332,17 @@ img {
   object-fit: cover;
   mix-blend-mode: soft-light;
 } 
+/* swiper */
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: red;
+}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  display: none;
+}
+
+
+
+
 
 
 /* Animation juice */
