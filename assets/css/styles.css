@@ -334,7 +334,7 @@ img {
 } 
 /* swiper */
 .swiper-button-next:after, .swiper-button-prev:after {
-  color: red;
+  color: var(--first-color);
 }
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
   display: none;
@@ -360,9 +360,12 @@ img {
 } 
 
 
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
  @media screen and (max-width: 330px) {
+
   .container{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -384,8 +387,15 @@ img {
   }
 } 
 
+
+@media screen and (max-width:797px){
+  .swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
+  }
+}
 /* For medium devices */
 @media screen and (min-width: 767px) {
+
   .nav{
     height: calc(var(--header-height) + 1.5rem);
   }
