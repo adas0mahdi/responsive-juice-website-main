@@ -392,6 +392,9 @@ img {
   .swiper-button-next:after, .swiper-button-prev:after {
     display: none;
   }
+  .home__container {
+    padding-top: 2.5rem;
+  }
 }
 /* For medium devices */
 @media screen and (min-width: 767px) {
