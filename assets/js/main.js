@@ -42,6 +42,9 @@ if(navClose){
     })
 }
 
+/*=============== UPDATE THE YEAR ===============*/
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
