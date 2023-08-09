@@ -208,7 +208,7 @@
             </div> 
         </main>
             <!-- about us  -->
-            <div class="wrapper">
+            <div id='about' class="wrapper">
 
                 <div class="background-container">
                     <div class="bg-1"></div>
@@ -218,7 +218,7 @@
                 <div class="about-container">
                     
                     <div class="image-container">
-                        <img src="./images/programmer working on pc.png" alt="">
+                        <img src="./assets/img/juice.png" alt="">
                         
                     </div>
         
@@ -232,6 +232,21 @@
                 </div>
             </div>
             
+           <!-- contact us  -->
+            <div class="contactContainer">
+                <form action="" onsubmit=" sendEmail(); reset(); return false;">
+                    <h3>Get In <span>Touch</span></h3>
+                     <input type="text" id="name" placeholder="Your Name" required>
+                     <input type="email" id="email" placeholder="Your Email" required>
+                     <input type="text" id="phone" placeholder="Your Phone number" required>
+                     <textarea name="" id="message" cols="30" rows="4" placeholder="How Can We Help You?"></textarea>
+                     <button class="home__button" type="submit" >Send</button>
+                </form>
+            </div>
+
+
+
+
            <!-- footer  -->
         <footer class="footer-distributed">
             <div class="footer-left">
@@ -278,7 +293,10 @@
                     </div>
                 </div>
         </footer>
-            
+
+
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <!--=============== swiper JS ===============-->
