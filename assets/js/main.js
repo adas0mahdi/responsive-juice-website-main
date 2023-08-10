@@ -36,28 +36,27 @@ if(navToggle){
 
 
 /*===== contact us  =====*/
-function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
+var btn = document.getElementById('btn')
+btn.addEventListener('click', function(e){
+    e.preventDefault()
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var message = document.getElementById('message').value;
+    var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
 
-    const serviceID ='service_54kw56d';
-    const templateID ='template_2k5iu0l';
+     Email.send({
+        SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
+        To : 'nixxxcatalo20@gmail.com',
+        From : 'adas0mahdi@gmail.com',
+        Subject : "contcat massage",
+        Body : body
+    }).then(
+    message => alert(message)
+    );
     
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!")
+})
 
-    })
-    .catch(err=>console.log(err));
-
-}
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if(navClose){

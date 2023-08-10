@@ -293,28 +293,6 @@
 
 
         <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            var btn = document.getElementById('btn')
-            btn.addEventListener('click', function(e){
-                e.preventDefault()
-                var name = document.getElementById('name').value;
-                var email = document.getElementById('email').value;
-                var phone = document.getElementById('phone').value;
-                var message = document.getElementById('message').value;
-                var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
-
-                 Email.send({
-                    SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
-                    To : 'nixxxcatalo20@gmail.com',
-                    From : 'adas0mahdi@gmail.com',
-                    Subject : "contcat massage",
-                    Body : body
-                }).then(
-                message => alert(message)
-                );
-                
-            })
-        </script>
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <!--=============== swiper JS ===============-->
