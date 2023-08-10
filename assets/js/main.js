@@ -47,7 +47,7 @@ btn.addEventListener('click', function(e){
     var message = document.getElementById('message').value;
     var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
       // Check if all required fields are filled out
-      if (!name || !email || !phone ) {
+      if (!name || !email || !phone || !message) {
         // Display an error message if any required field is empty
         Swal.fire({
             icon: 'error',
