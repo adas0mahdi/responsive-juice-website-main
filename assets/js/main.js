@@ -34,44 +34,30 @@ if(navToggle){
     })
 }
 
+
 /*===== contact us  =====*/
-function sendEmail() {
-  // Get the values from the form
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-  // Create the email body
-  var emailBody = "Name: " + name + "\n" +
-                  "Email: " + email + "\n" +
-                  "Phone: " + phone + "\n" +
-                  "Message: " + message;
+    const serviceID ='service_54kw56d';
+    const templateID ='template_2k5iu0l';
+    
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
 
-  // Send the email using an email service
-  // This is just an example, you will need to use a real email service
-  Email.send({
-      Host: "smtp.gmail.com",
-      Username: "adas0mahdi@gmail.com",
-      Password: "20182397adas09953532613",
-      To: 'nixxxcatalo20@gmail.com',
-      From: email,
-      Subject: "New Contact Form Submission",
-      Body: emailBody
-  }).then(
-      message => alert("Your message has been sent!")
-  );
+    })
+    .catch(err=>console.log(err));
+
 }
-
-function reset() {
-  // Reset the form fields
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("message").value = "";
-}
-
-
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if(navClose){

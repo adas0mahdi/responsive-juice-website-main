@@ -10,7 +10,6 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="./assets/css/styles.css">
-     
 
         <title>Responsive juice website - Bedimcode</title>
     </head>
@@ -234,17 +233,15 @@
             
            <!-- contact us  -->
             <div class="contactContainer">
-                <form action="" onsubmit=" sendEmail(); reset(); return false;">
+                <form method="post">
                     <h3>Get In <span>Touch</span></h3>
                      <input type="text" id="name" placeholder="Your Name" required>
                      <input type="email" id="email" placeholder="Your Email" required>
                      <input type="text" id="phone" placeholder="Your Phone number" required>
                      <textarea name="" id="message" cols="30" rows="4" placeholder="How Can We Help You?"></textarea>
-                     <button class="home__button" type="submit" >Send</button>
+                     <button id="btn" class="home__button">Send</button>
                 </form>
             </div>
-
-
 
 
            <!-- footer  -->
@@ -295,8 +292,29 @@
         </footer>
 
 
-        
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            var btn = document.getElementById('btn')
+            btn.addEventListener('click', function(e){
+                e.preventDefault()
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var phone = document.getElementById('phone').value;
+                var message = document.getElementById('message').value;
+                var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
+
+                 Email.send({
+                    SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
+                    To : 'nixxxcatalo20@gmail.com',
+                    From : 'adas0mahdi@gmail.com',
+                    Subject : "contcat massage",
+                    Body : body
+                }).then(
+                message => alert(message)
+                );
+                
+            })
+        </script>
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <!--=============== swiper JS ===============-->
