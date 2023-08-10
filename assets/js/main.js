@@ -36,26 +36,47 @@ if(navToggle){
 
 
 /*===== contact us  =====*/
-var btn = document.getElementById('btn')
 btn.addEventListener('click', function(e){
-    e.preventDefault()
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var phone = document.getElementById('phone').value;
-    var message = document.getElementById('message').value;
-    var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
-
-     Email.send({
-        SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
-        To : 'nixxxcatalo20@gmail.com',
-        From : 'adas0mahdi@gmail.com',
-        Subject : "contcat massage",
-        Body : body
-    }).then(
-    message => alert(message)
-    );
+  e.preventDefault()
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var message = document.getElementById('message').value;
+  
+  // Check if all required fields are filled out
+  if (!name || !email || !phone || !message) {
+      // Display an error message if any required field is empty
+      Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please fill out all required fields!'
+      });
+      return;
+  }
+  
+  var body = 'name: '+name + '<br/> email: '+ email + '<br/> message: '+ message; 
+  
+   Email.send({
+      SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
+      To : 'nixxxcatalo20@gmail.com',
+      From : 'adas0mahdi@gmail.com',
+      Subject : "contcat massage",
+      Body : body
+  }).then(function(message) {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
     
+    // Clear form fields
+    contactForm.reset();
+});
+  
 })
+
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */

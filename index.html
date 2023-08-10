@@ -8,6 +8,8 @@
         <!--=============== REMIXICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+        <!--=============== jqury for ===============-->
+        <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="./assets/css/styles.css">
 
@@ -232,18 +234,16 @@
             </div>
             
            <!-- contact us  -->
-            <div class="contactContainer">
-                <form method="post">
+            <div  class="contactContainer">
+                <form id="contactForm" method="post">
                     <h3>Get In <span>Touch</span></h3>
-                     <input type="text" id="name" placeholder="Your Name" required>
-                     <input type="email" id="email" placeholder="Your Email" required>
-                     <input type="text" id="phone" placeholder="Your Phone number" required>
+                     <input type="text" id="name" placeholder="Your Name" required >
+                     <input type="email" id="email" placeholder="Your Email" required >
+                     <input type="text" id="phone" placeholder="Your Phone number" required >
                      <textarea name="" id="message" cols="30" rows="4" placeholder="How Can We Help You?"></textarea>
                      <button id="btn" class="home__button">Send</button>
                 </form>
             </div>
-
-
            <!-- footer  -->
         <footer class="footer-distributed">
             <div class="footer-left">
@@ -292,6 +292,9 @@
         </footer>
 
 
+        <!-- sweet alart  -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- contact us  -->
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
