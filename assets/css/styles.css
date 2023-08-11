@@ -710,6 +710,21 @@ form button{
 
 
 /* CARDS */
+.container-card .card__container h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px;
+  font-family: var(--second-font);
+  color: var(--first-color);
+  font-size: xx-large;
+}
+.container-card .card__container h2 span{
+  color: var(--title-color);
+}
 .container-card{
   display: flex;
   justify-content: center;
@@ -736,7 +751,7 @@ form button{
 
 .card__article{
   width: 300px;
-  border-radius: 1.25rem;
+  border-radius: 90px 1.25rem 1.25rem 1.25rem;
   overflow: hidden;
 }
 .card__imge{
@@ -748,7 +763,7 @@ form button{
 .card__date{
   background-color: #2d2a30;
   padding: 1.5rem 2rem;
-  border-radius: 1rem;
+  border-radius:1rem 1rem 90px 1rem;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -784,7 +799,7 @@ form button{
 .card__description{
   font-weight: 500;
   margin-bottom: 1.75rem;
-  color: #fff;
+  color: var(--body-color);
 }
 
 
