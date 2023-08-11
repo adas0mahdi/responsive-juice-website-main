@@ -43,6 +43,14 @@ body {
   color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  overflow-x: hidden;
+}
+
+
 ul {
   list-style: none;
 }
@@ -334,6 +342,7 @@ img {
 footer {
     position: fixed;
     bottom: 0;
+  z-index: 99;
 }
 
 @media (max-height:800px) {
@@ -542,7 +551,7 @@ form{
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 2vw 4vw;
+  padding: 2.5vw 3vw;
   width: 90%;
   max-width: 600px;
   border-radius: 30px;
@@ -696,6 +705,92 @@ form button{
     
 }
 }
+@media screen and (max-width: 400px){
+}
+
+
+/* CARDS */
+.container-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 20px 0;
+  /* height: 100vh ; */
+}
+
+
+/* .card__container{
+  padding: 5rem;
+} */
+
+.card__content{
+  margin-inline: 1.75rem;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.card__article{
+  width: 300px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.card__imge{
+  position: relative;
+  background-color: var(--first-color);
+  padding-top:1.5rem;
+  margin-bottom: -.75rem ;
+}
+.card__date{
+  background-color: #2d2a30;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img{
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow{
+  width: 200px;
+  height: 200px;
+  background-color: #630505b3;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  right: 0;
+  left: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name{
+  font-size: large;
+  color: var(--first-color);
+  margin-bottom: .75rem;
+}
+
+.card__description{
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: #fff;
+}
+
+
+
+
+
 
 
 /* Animation juice */
