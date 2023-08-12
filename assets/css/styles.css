@@ -585,128 +585,128 @@ form button{
 
 }
 
-
-
 /* about us  */
-.wrapper{
-  position: relative;
+.about{
+  height: 100vh;
+  max-width: 100%;
+  background: var(--body-color);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* margin: 200px 0; */
 }
-.background-container{
-  width: 100%;
-  min-height: 100vh;
-  display: flex; 
+
+.all-text{
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
 }
-.bg-1{
-  flex: 1;
-  background-color: rgb(180, 243, 175);
+
+.all-text h4{
+  font-family: var(--second-font);
+  color: var(--first-color);
+  font-size: xx-large;
+  margin-bottom: 10px;
 }
-.bg-2{
-  flex: 1;
-  background-color: rgb(163, 236, 240);
+.all-text h4 span {
+  color: var(--title-color);
 }
-.about-container{
-  width: 85%;
-  min-height: 80vh;
-  position: absolute;
-  background-color: white;
-  box-shadow: 24px 24px 30px #6d8dad;
+.all-text h1{
+  font-size: 25px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--body-font);
+}
+.all-text p{
+  font-family: var(--body-font);
+  font-size: 16px;
+  color: #777777;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+.all-text .btn .home__button{
+  margin-left: 20px;
+}
+.mainAbout{
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 20px 40px;
-  border-radius: 30px;
+  justify-content: space-around;
 }
-.image-container{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image-container img {
-  width: 500px;
+
+
+.mainAbout .img-container{
   height: 500px;
-  margin: 20px;
-  border-radius: 10px;
+  width: 500px;
+  background: var(--body-color);
 }
-.text-container{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  font-size: 22px;
+
+.img-one{
+  position: relative;
+  left: 70px;
+  top: -30px;
+  height: 200px;
+  width: 150px;
+  background-color: #3F71EA;
 }
-.text-container h1{
-  font-size: 50px;
-  padding: 20px 0px;
+.img-two{
+  position: relative;
+  height: 230px;
+  width: 200px;
+  left: 95px;
+  top: 50px ;
+  background-color: #ea3fcb;
 }
-.text-container a{
-  text-decoration: none;
-  padding: 12px;
-  margin: 50px 0px;
-  background-color: rebeccapurple;
-  border: 2px solid transparent;
-  color: white;
-  border-radius: 5px;
-  transition: .3s all ease;
+.img-three{
+  position: relative;
+  height: 230px;
+  width: 200px;
+  background-color: #40db11;
+  left: 10px;
+  bottom: 5px;
 }
-.text-container a:hover{
-  background-color: transparent;
+.box-twenty{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 250px;
+  bottom:155px;
+  background-color: black;
+  border-radius: 20px;
+}
+.box-twenty h4{
+  font-size:40px ;
+  position:relative;
+  color: #ffffff;
+  top: 25px;
+  left: 27px;
+}
+.img-container p{
   color: black;
-  border: 2px solid rebeccapurple;
+  font-family: var(--second-font);
+  position: relative;
+  font-size: 17px;
+  left: 360px;
+  bottom: 225px;
 }
-@media screen and (max-width: 1600px){
-  .about-container{
-      width: 90%;
+.img-container p span{
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 1250){
+  .about{
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
   }
-  .image-container img{
-      width: 400px;
-      height: 400px;
-  }
-  .text-container h1{
-      font-size: 30px;
-  }
 }
-@media screen and (max-width: 1100px){
-  .about-container{
-      flex-direction: column;
-  }
-  .about-container{
-    width: 70%;
-    height:90%;
-}
-  .image-container img{
-      width:250px;
-      height: 250px;
-      
-  }
-  .text-container {
-      align-items: center;
-  }
- 
-  .text-container h1{
-    font-size: 30px;
-    padding: 10px 0px;
-}
-  .text-container p{
-    font-size: 15px;
-}
-.text-container a {
-  margin: 30px 0 ;
-}
-}
-@media screen and (max-width: 400px){
-  .image-container img{
-    width:80px;
-    height: 80px;
-    
-}
-}
-@media screen and (max-width: 400px){
-}
+
+
 
 
 /* CARDS */
