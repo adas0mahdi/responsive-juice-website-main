@@ -175,3 +175,23 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+// window details popup 
+const viewMoreButtons = document.querySelectorAll('.view-more-button');
+const popups = document.querySelectorAll('.popup');
+
+viewMoreButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const popupId = event.currentTarget.getAttribute('data-popup');
+        const popup = document.getElementById(popupId);
+        popup.style.display = 'flex';
+    });
+});
+
+popups.forEach((popup) => {
+    popup.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
