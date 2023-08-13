@@ -692,8 +692,9 @@ form button{
   font-family: var(--second-font);
   position: relative;
   font-size: 17px;
-  /* right: -360px; */
+  right: -360px;
   bottom: 225px;
+  width: 120px;
 }
 .img-container p span{
   margin-left: 30px;
