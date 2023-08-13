@@ -10,10 +10,10 @@ const navMenu = document.getElementById('nav-menu'),
         direction: 'horizontal',
         loop: true,
        
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // },
         // If we need pagination
         pagination: {
           el: '.swiper-pagination',
