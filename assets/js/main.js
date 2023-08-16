@@ -10,10 +10,10 @@ const navMenu = document.getElementById('nav-menu'),
         direction: 'horizontal',
         loop: true,
        
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // },
         // If we need pagination
         pagination: {
           el: '.swiper-pagination',
@@ -65,7 +65,7 @@ btn.addEventListener('click', function(e){
 
      Email.send({
         SecureToken : "76ad58ea-6f06-4876-99eb-5867274fde30",
-        To : 'nixxxcatalo20@gmail.com',
+        To : '20182397@s.ubaguio.edu',
         From : 'adas0mahdi@gmail.com',
         Subject : "contcat massage",
         Body : body
